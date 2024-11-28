@@ -1,4 +1,5 @@
 # Face Recognition Attendance System
+
 A simple Flask-based web application to take attendance using face recognition. This system uses a webcam to detect and recognize faces in real-time, marking the attendance of registered students. The model is trained using images captured from the webcam, and the attendance data is saved in CSV files.
 
 ##Features
@@ -8,7 +9,8 @@ New User Registration: Allows adding new users by capturing their face images an
 Daily Attendance CSV: Attendance is saved in a CSV file, named with the current date, to track the attendance history.
 Model Training: The system uses a K-Nearest Neighbors (KNN) classifier to recognize faces based on previously captured images.
 
-##Install Dependencies
+## Install Dependencies
+
 You can install the required Python packages using pip:
 pip install -r requirements.txt
 
@@ -17,7 +19,7 @@ pip install -r requirements.txt
 1. Clone or Download the Repository
 If you haven't already, clone or download the project repository to your local machine.
 
-git clone https://github.com/yourusername/face-recognition-attendance-system.git
+git clone https://github.com/MohitSahgal/AIP/edit/main/Proxy.git
 cd face-recognition-attendance-system
 
 2. Place Haar Cascade Classifier
@@ -52,12 +54,10 @@ After image capture is complete, the system will train the model to recognize th
 5. Train the Model
 Once at least one user is added, the system will train a KNN model using the captured images. The model is saved in the static/face_recognition_model.pkl file, which will be used for real-time face recognition during attendance tracking.
 
-##Usage Instructions
+## Usage Instructions
+
 1. Start the Flask App
 To start the Flask server and run the application, use the following command in your terminal:
-
-bash
-Copy code
 python app.py
 This will launch the app on http://localhost:5000/.
 
