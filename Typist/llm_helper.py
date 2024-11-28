@@ -12,7 +12,7 @@ llm = genai.GenerativeModel(
 
 
 if __name__ == "__main__":
-    response = llm.generate_content("recipe of  samosa are ")
+    response = llm.generate_content("Recipe of Pasta are ")
     print(response.text)
 
 
