@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalised Post Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="container fade-in">
+        <h2>Personalised Post Generator</h2>
+
+        {% if error_message %}
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-triangle"></i> {{ error_message }}
+            </div>
+        {% endif %}
+
+        <form method="POST" class="mb-4">
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="tag" class="form-label">Select Topic (Tag)</label>
+                    <select class="form-select" id="tag" name="tag">
+                        {% for tag in tags %}
+                            <option value="{{ tag }}" {% if tag == selected_tag %}selected{% endif %}>{{ tag }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="length" class="form-label">Select Length</label>
+                    <select class="form-select" id="length" name="length">
+                        {% for length in length_options %}
+                            <option value="{{ length }}" {% if length == selected_length %}selected{% endif %}>{{ length }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="language" class="form-label">Select Language</label>
+                    <select class="form-select" id="language" name="language">
+                        {% for language in language_options %}
+                            <option value="{{ language }}" {% if language == selected_language %}selected{% endif %}>{{ language }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate</button>
+        </form>
+
+        {% if post %}
+        <div class="generated-post">
+            <h4>Generated Post</h4>
+            <p>{{ post }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Personalised Post Generator. Created with ❤️ by Mohit Sahgal</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

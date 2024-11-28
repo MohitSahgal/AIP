@@ -1,0 +1,118 @@
+/* static/css/styles.css */
+
+/* General body styling */
+body {
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Container and form styling */
+.container {
+    max-width: 900px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header styling */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4A90E2;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form elements styling */
+.form-label {
+    font-weight: bold;
+    color: #4A90E2;
+}
+
+.form-select {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Success/Error messages */
+.alert {
+    margin-bottom: 20px;
+}
+
+/* Styling for generated post */
+.generated-post {
+    background-color: #f8f9fa;
+    border-left: 5px solid #4A90E2;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    color: #555;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: bounceIn 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards, zoomIn 0.8s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(1000px) scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-20px) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Add some transitions to form */
+form input, form select, form button {
+    transition: all 0.3s ease;
+}
+
+form input:focus, form select:focus, form button:hover {
+    background-color: #f1f9ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
