@@ -32,7 +32,7 @@ This project is not yet set up for ephemeral environments (e.g. `uvx` usage).
 Run this project locally by cloning this repo
 
 ```bash
-git clone https://github.com/MohitSahgal/AIP/spotify-mcp.git
+git clone https://github.com/MohitSahgal/AIP/tree/main/spotify-mcp
 ```
 
 Add this tool as a mcp server.
